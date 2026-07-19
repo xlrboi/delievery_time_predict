@@ -993,7 +993,7 @@ dependencies = [
     { name = "docker" },
     { name = "dpath" },
     { name = "dulwich" },
-    { name = "dvc" },
+    { name = "dvc", extra = ["s3"] },
     { name = "dvc-data" },
     { name = "dvc-http" },
     { name = "dvc-objects" },
@@ -1209,7 +1209,7 @@ requires-dist = [
     { name = "docker", specifier = ">=7.2.0" },
     { name = "dpath", specifier = ">=2.2.0" },
     { name = "dulwich", specifier = ">=1.2.12" },
-    { name = "dvc", specifier = ">=3.67.1" },
+    { name = "dvc", extras = ["s3"], specifier = ">=3.67.1" },
     { name = "dvc-data", specifier = ">=3.18.3" },
     { name = "dvc-http", specifier = ">=2.32.0" },
     { name = "dvc-objects", specifier = ">=5.2.0" },
@@ -1537,6 +1537,11 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/13/1e/957a50eab8af18a5837bf47f148b90dac36650150faca840d5c020272098/dvc-3.67.1.tar.gz", hash = "sha256:0a941016a10ac8c99b5342e5a964c9bff29c191f7b3539ff3e04910d828f82ab", size = 675009, upload-time = "2026-03-31T05:07:30.558Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/6d/30/088486ccb2ceb0c93461f6410cfa43d8dbe2083fdb61e334a666e3e8a0a2/dvc-3.67.1-py3-none-any.whl", hash = "sha256:b1ea7d8d690a637adbcba74591555f811eed1ab96cc74d808dfd861669d030ed", size = 470073, upload-time = "2026-03-31T05:07:27.996Z" },
+]
+
+[package.optional-dependencies]
+s3 = [
+    { name = "dvc-s3" },
 ]
 
 [[package]]
